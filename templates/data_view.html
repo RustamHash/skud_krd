@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block msg %}
+    {{ super() }}
+    {% for cat, msg in get_flashed_messages(True) %}
+        <div class="flash {{ cat }}">{{ msg }}</div>
+    {% endfor %}
+{% endblock %}
+
+{% block head %}
+    <form action="{{ url_for('data_view') }}" method="post">
+        <label for="start_date"></label>
+        <label>
+            <input type="date" name="start_date" max={{ max_date }}>
+        </label>
+        <label for="end_date"></label>
+        <label>
+            <input type="date" name="end_date" max={{ max_date }}>
+        </label>
+        <input type="submit" name="submit" value="Сформировать">
+    </form>
+    <div>
+        <p>
+            Отчет за период с {{ start_date }} по {{ end_date }}
+        </p>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <table>{{ table|safe }}</table>
+{% endblock %}

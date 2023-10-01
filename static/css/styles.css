@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    padding: 15px;
+}
+
+.title {
+    background-color: #1c021c;
+    border-bottom: 10px darkred;
+}
+
+.title a {
+    display: block;
+}
+
+img {
+    max-width: 150px;
+}
+
+
+.head_menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-items: left;
+    justify-content: left;
+}
+.head_menu a {
+    padding-left: 15px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+.flash {
+    padding: 10px;
+    text-align: center;
+}
+
+.flash.success {
+	border: 1px solid #21DB56;
+	background: #AEFFC5;
+}
+.flash.error {
+	border: 1px solid #FF4343;
+	background: #FF9C9C;
+}

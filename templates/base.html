@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/static/css/styles.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Скуд</title>
+</head>
+<body>
+<div class="title">
+    <a href="/"><img src="/static/img/slex-logo.png" alt="SLEX"></a>
+</div>
+<div class="head_menu">
+    <a href="/">Главная</a>
+    <a href="{{ url_for('data_activate') }}">Отчет</a>
+    <a href="{{ url_for('users_view') }}">Сотрудники</a>
+    <a href="#">Настройки</a>
+</div>
+{% block msg %}
+{% endblock %}
+{% block head %}
+{% endblock %}
+{% block body %}
+{% endblock %}
+</body>
+</html>
